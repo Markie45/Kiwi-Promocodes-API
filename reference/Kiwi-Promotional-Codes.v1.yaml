@@ -22,7 +22,36 @@ paths:
         - promocodes endpoints
       responses: {}
       operationId: get-promocodes
-      description: "Access a list of kiwi.com promocodes along with additional information like reaons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
+      description: "Access a list of kiwi.com promocodes along with additional information like the booking's ID, the reaons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: code
+          description: '**Code**. Search by unique alphnumeric code. *Example: MB31025*. '
+          required: true
+        - schema:
+            type: integer
+          in: query
+          name: BID
+          description: "**BID**. Calls the booking ID (*Example: 203589*) and reasons for the promocode's creation.  "
+        - schema:
+            type: boolean
+          in: query
+          name: used
+          description: '**Used**. If *true*, the promocode has been used.'
+        - schema:
+            type: integer
+          in: query
+          name: amount
+          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: €450.00*   '
+        - schema:
+            type: string
+          in: query
+          name: email
+          description: '**Email**. Calls the email details of promocode users. *Example: joansmyth@email.com*.  '
+      security:
+        - app_id: []
 components:
   schemas: {}
   securitySchemes:
