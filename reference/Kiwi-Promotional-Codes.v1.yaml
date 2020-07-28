@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Kiwi Promotional Codes
   version: '1.0'
-  description: 'Retrieve a list of kiwi.com promotional codes along with important additional information. Additional information can include the booking ID, the reason for the promotional code’s creation, if the promotional code has been used, the amount (in euro) that the promotional code covers, as well as the email account details of promotional code users. **Note**: The Kiwi Promocodes API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes.               '
+  description: 'Retrieve a list of kiwi.com promocodes along with related additional information. Additional information can include the booking ID, why the promocode was created, if the promocode was used, the amount (in euro) that the promocode covers, as well as the email account details of promocode users. **Note**: The Kiwi Promocodes API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes.               '
   contact:
     name: Kiwi Support
     url: 'https://kiwi.com/api'
@@ -21,7 +21,7 @@ paths:
       tags:
         - promocodes endpoints
       operationId: get-promocodes
-      description: "Access a list of kiwi.com promocodes along with additional information like the booking's ID, the reasons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
+      description: 'Access a list of kiwi.com promocodes along with their additional information. Additional information includes the booking ID, why the promocodes were creation, if it was used, the monetary amount (€) the promocode covers, as well as the email account details of promocode users.    '
       parameters:
         - schema:
             type: string
