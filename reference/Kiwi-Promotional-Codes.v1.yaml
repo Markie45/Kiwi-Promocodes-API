@@ -95,7 +95,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Unauthorized-Response'
+                $ref: '#/components/schemas/unauthorized_response'
           headers: {}
 components:
   schemas:
