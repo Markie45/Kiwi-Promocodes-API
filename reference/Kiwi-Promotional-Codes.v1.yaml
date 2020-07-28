@@ -21,7 +21,7 @@ paths:
       tags:
         - promocodes endpoints
       operationId: get-promocodes
-      description: "Access a list of kiwi.com promocodes along with additional information like the booking's ID, the reaons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
+      description: "Access a list of kiwi.com promocodes along with additional information like the booking's ID, the reasons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
       parameters:
         - schema:
             type: string
@@ -36,6 +36,7 @@ paths:
           description: "**Bid**. Calls the booking ID (*Example: 203589*) and reasons for the promocode's creation.  "
         - schema:
             type: boolean
+            example: ''
           in: query
           name: used
           description: '**Used**. If *true*, the promocode has been used.'
