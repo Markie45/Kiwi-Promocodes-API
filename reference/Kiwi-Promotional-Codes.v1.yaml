@@ -90,8 +90,24 @@ paths:
                         used: false
                         amount: 152
                         email: joansmythh@email.com
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Unauthorized-Response'
+          headers: {}
 components:
-  schemas: {}
+  schemas:
+    Unauthorized-Response:
+      title: Unauthorized-Response
+      type: object
+      description: You are not authorized to perform this operation.
+      properties:
+        code:
+          type: string
+      required:
+        - code
   securitySchemes:
     app_id:
       type: http
