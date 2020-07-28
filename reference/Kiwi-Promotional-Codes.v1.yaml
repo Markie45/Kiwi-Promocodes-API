@@ -99,10 +99,10 @@ paths:
           headers: {}
 components:
   schemas:
-    Unauthorized-Response:
+    unauthorized_response:
       title: Unauthorized-Response
       type: object
-      description: You are not authorized to perform this operation.
+      description: ''
       properties:
         code:
           type: string
