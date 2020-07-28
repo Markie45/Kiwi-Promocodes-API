@@ -32,8 +32,8 @@ paths:
         - schema:
             type: integer
           in: query
-          name: BID
-          description: "**BID**. Calls the booking ID (*Example: 203589*) and reasons for the promocode's creation.  "
+          name: bid
+          description: "**Bid**. Calls the booking ID (*Example: 203589*) and reasons for the promocode's creation.  "
         - schema:
             type: boolean
           in: query
