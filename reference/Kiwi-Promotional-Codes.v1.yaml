@@ -21,4 +21,4 @@ components:
     app_id:
       type: http
       scheme: oauth
-      description: Access is available to aothorized users via http.
+      description: Access is available to authorized users via http.
