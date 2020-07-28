@@ -14,7 +14,15 @@ info:
 servers:
   - url: 'http://promocodes.kiwi.com'
     description: Promocodes
-paths: {}
+paths:
+  /promocodes:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - promocodes endpoints
+      responses: {}
+      operationId: get-promocodes
+      description: "Access a list of kiwi.com promocodes along with additional information like reaons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
 components:
   schemas: {}
   securitySchemes:
