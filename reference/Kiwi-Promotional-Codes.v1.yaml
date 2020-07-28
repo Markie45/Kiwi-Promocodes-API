@@ -61,28 +61,35 @@ paths:
                 properties:
                   code:
                     type: string
-                    example: AAAAQQ
-                    description: Unique alphanumeric code
+                    example: AAAAQ
+                    description: "The promocode's unique alphanumeric code"
                   bid:
                     type: integer
                     example: 'null'
-                    description: Booking ID
+                    description: The booking ID
                   used:
                     type: boolean
-                    example: 'False'
-                    description: "Status of promocode's use"
+                    example: 'false'
+                    description: "The status of promocode's use"
                   amount:
                     type: integer
                     example: 152
-                    description: 'Euro amount the promcode covers '
+                    description: 'The amount in euro the promcode covers '
                   email:
                     type: string
                     example: joansmyth@email.co
-                    description: User email details
+                    description: Email details of promocode users
                 required:
                   - code
               examples:
-                example-1: {}
+                Schema Example:
+                  value:
+                    promocodes:
+                      - code: AAAAQ
+                        bid: null
+                        used: false
+                        amount: 152
+                        email: joansmythh@email.com
 components:
   schemas: {}
   securitySchemes:
