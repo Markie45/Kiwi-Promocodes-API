@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: Kiwi Promotional Codes
+  version: '1.0'
+  description: 'Retrieve a list of kiwi.com promotional codes along with important additional information. Additional information can include the booking ID, the reason for the promotional code’s creation, if the promotional code has been used, the amount (in euro) that the promotional code covers, as well as the email account details of promotional code users. **Note**: The Kiwi Promocodes API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes.               '
+  contact:
+    name: Kiwi Support
+    url: 'https://kiwi.com/api'
+    email: email@kiwi.com
+  termsOfService: 'https://kiwi.com/terms'
+  license:
+    name: Apache 2.0
+    url: 'https://kiwi.com/price'
+servers:
+  - url: 'http://promocodes.kiwi.com'
+    description: Promocodes
+paths: {}
+components:
+  schemas: {}
+  securitySchemes:
+    app_id:
+      type: http
+      scheme: oauth
+      description: Access is available to aothorized users via http.
