@@ -17,7 +17,7 @@ servers:
 paths:
   /promocodes:
     get:
-      summary: Your GET endpoint
+      summary: GET Promocodes
       tags:
         - promocodes endpoints
       operationId: get-promocodes
