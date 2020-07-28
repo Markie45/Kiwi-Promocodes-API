@@ -100,7 +100,7 @@ paths:
 components:
   schemas:
     unauthorized_response:
-      title: Unauthorized-Response
+      title: unauthorized_response
       type: object
       description: ''
       properties:
