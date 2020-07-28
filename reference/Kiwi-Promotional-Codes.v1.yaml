@@ -20,7 +20,6 @@ paths:
       summary: Your GET endpoint
       tags:
         - promocodes endpoints
-      responses: {}
       operationId: get-promocodes
       description: "Access a list of kiwi.com promocodes along with additional information like the booking's ID, the reaons behind the promocode's creation, promocode use, the amount (€) the promocode covers, as well as the email account details of promocode users.    "
       parameters:
@@ -28,7 +27,7 @@ paths:
             type: string
           in: query
           name: code
-          description: '**Code**. Search by unique alphnumeric code. *Example: MB31025*. '
+          description: '**Code**. Search by unique alphnumeric code. *Example: AAAAR*. '
           required: true
         - schema:
             type: integer
@@ -44,7 +43,7 @@ paths:
             type: integer
           in: query
           name: amount
-          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: €450.00*   '
+          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: 450.00*   '
         - schema:
             type: string
           in: query
@@ -52,6 +51,38 @@ paths:
           description: '**Email**. Calls the email details of promocode users. *Example: joansmyth@email.com*.  '
       security:
         - app_id: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: AAAAQQ
+                    description: Unique alphanumeric code
+                  bid:
+                    type: integer
+                    example: 'null'
+                    description: Booking ID
+                  used:
+                    type: boolean
+                    example: 'False'
+                    description: "Status of promocode's use"
+                  amount:
+                    type: integer
+                    example: 152
+                    description: 'Euro amount the promcode covers '
+                  email:
+                    type: string
+                    example: joansmyth@email.co
+                    description: User email details
+                required:
+                  - code
+              examples:
+                example-1: {}
 components:
   schemas: {}
   securitySchemes:
