@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Kiwi Promotional Codes
   version: '1.0'
-  description: 'Retrieve a list of kiwi.com promocodes along with their related information. Additional information can include the booking ID, why the promocode was created, if the promocode was already used, the monetary amount (euro) that the promocode covers, as well as the email account details of promocode users. **Note**: The Kiwi Promocodes API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes.               '
+  description: 'Retrieve a list of kiwi.com promocodes along with their related information. Additional information can include the booking ID, why the promocode was created, if the promocode was already used, the monetary amount (euro) that the promocode covers, as well as the email account details of promocode users. **Note**: The Kiwi Promocodes API is only accessible (via https) to authorized users. **Note**: This API connects directly to the kiwi.com backend; consequently, the Kiwi team recommends that you only use this API to interact with our promotional codes.'
   contact:
     name: Kiwi Support
     url: 'https://kiwi.com/api'
@@ -21,19 +21,19 @@ paths:
       tags:
         - promocodes endpoints
       operationId: get-promocodes
-      description: 'Access a list of kiwi.com promocodes along with their additional information. Additional information includes the booking ID, why the promocodes were creation, if it was used, the monetary amount (€) the promocode covers, as well as the email account details of promocode users.    '
+      description: 'Access a list of kiwi.com promocodes along with their additional information. Additional information includes the booking ID, why the promocodes were creation, if it was used, the monetary amount (€) the promocode covers, as well as the email account details of promocode users.'
       parameters:
         - schema:
             type: string
           in: query
           name: code
-          description: '**Code**. Search by unique alphnumeric code. *Example: AAAAR*. '
+          description: '**Code**. Search by unique alphanumeric code. *Example: AAAAR*.'
           required: true
         - schema:
             type: integer
           in: query
           name: bid
-          description: '**Bid**. Calls the booking ID (*Example: 203589*).  '
+          description: '**Bid**. Calls the booking ID (*Example: 203589*).'
         - schema:
             type: boolean
             example: ''
@@ -44,12 +44,12 @@ paths:
             type: integer
           in: query
           name: amount
-          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: 450.00*   '
+          description: '**Amount**. Calls the monetary amount in euro that the promocode covers. *Example: 450.00*'
         - schema:
             type: string
           in: query
           name: email
-          description: '**Email**. Calls the email details of promocode users. *Example: joansmyth@email.com*.  '
+          description: '**Email**. Calls the email details of promocode users. *Example: joansmyth@email.com*.'
       security:
         - app_id: []
       responses:
@@ -75,7 +75,7 @@ paths:
                   amount:
                     type: integer
                     example: 152
-                    description: 'The amount in euro the promcode covers '
+                    description: 'The amount in euro the promocode covers'
                   email:
                     type: string
                     example: joansmyth@email.com
